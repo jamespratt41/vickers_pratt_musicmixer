@@ -1,7 +1,90 @@
-@charset "utf-8"; 
-/*css document*/ 
+@charset "utf-8";
+/*css document*/
 
+
+/* <-------- Commonly used ids and classes ------------> */
 .hidden {
 	display: none;
 }
- 
+
+#container{
+	margin: 0 auto;
+
+	width: 1280px;
+	background-color: #e77878;
+}
+
+p{
+	color: #fff;
+	font-size: 34px;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-family: 'Luckiest Guy', cursive;
+	letter-spacing: 3px;
+}
+
+h2{
+	color: #fff;
+	font-size: 34px;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-family: 'Luckiest Guy', cursive;
+	letter-spacing: 3px;
+}
+/* <-------- These are the header elements------------> */
+#header{
+	background-color: #e1e1e1;
+}
+
+#voted{
+	margin-left: 40px;
+}
+
+/* <---------------------Intro Section Elements---------------------> */
+
+
+
+
+/* <-------- These are the active playing icons elements------------> */
+#icons{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+#iconSvg{
+	display: flex;
+	flex-direction: column;
+	column-count: 2;
+	justify-content: space-around;
+}
+
+
+/* <-------- These are the icon set elements ------------> */
+#iconHolder{
+	width: 600px;
+	height: 200px;
+	border-radius: 10px;
+	border: 5px solid #e1e1e1;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.iconSet{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+/* <------------These are the footer elements-------------> */
+#footer{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #e1e1e1;
+	height: 100px;
+}
