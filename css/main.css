@@ -56,18 +56,26 @@ h2{
 	margin-bottom: 20px;
 }
 
-#iconSvg{
+.iconSvg{
 	display: flex;
 	flex-direction: column;
 	column-count: 2;
 	justify-content: space-around;
 }
 
+.empty{
+	width: 90px;
+	height: 90px;
+	align-items: center;
+	background-color: white;
+	margin-bottom: 10px;
+}
+
+
 
 /* <-------- These are the icon set elements ------------> */
 #iconHolder{
 	width: 600px;
-	height: 200px;
 	border-radius: 10px;
 	border: 5px solid #e1e1e1;
 	margin: 0 auto;
@@ -80,6 +88,12 @@ h2{
 	justify-content: space-around;
 	margin: 0 auto;
 	margin-bottom: 20px;
+}
+
+.iconSet img{
+	height: 80px;
+	width: 80px;
+
 }
 /* <------------These are the footer elements-------------> */
 #footer{
