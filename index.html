@@ -5,22 +5,38 @@
 		<title>Rap Song Generator</title>
 		<link href="css/reset.css" rel="stylesheet" type="text/css">
 		<link href="css/main.css" rel="stylesheet" type="text/css">
-		<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
 	</head>
 	<body>
 		<h1 class="hidden">Rap Song Generator</h1>
 
 	<section id="container">
 		<!-- this is the header and intro to the website -->
-		<header id="header">
+		<header>
 			<h2 class="hidden">Main Header</h2>
-			<img src="images/voted.svg" alt="Voted #1 in 2019" width="100" height="100" id="voted">
-			<img src="images/title.svg" alt="Rap Song Generator">
+			<div id="header">
+				<form id="searchForm">
+					<input type="text" placeholder="search">
+				</form>
+				<img src="images/title.svg" alt="Rap Song Generator">
+				<a href="#" id="signIn">SIGN IN</a>
+			</div>
+			<nav id="mainNav">
+				<ul>
+					<p>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="#">ABOUT</a></li>
+					<li><a href="#">REVIEWS</a></li>
+					<li><a href="#">OTHER GAMES</a></li>
+					<li><a href="#">CONTACT</a></li>
+					</p>
+				</ul>
+			</nav>
 		</header>
 
+
 		<section id="intro">
-			<h2 class="hidden">Intro</h2>
-			<p>Drag and drop  Intrumental and  vocal icons to create<br>your own unique Rap Song  </p>
+			<h2>Drag and drop  Intrumental and  vocal icons to create<br>your own unique Rap Song  </h2>
 		</section>
 
 		<!-- these are the icons that are going to play the music -->
@@ -66,22 +82,29 @@
 		<section id="iconHolder">
 			<h2>Drag an Icon to Get Started</h2>
 			<div class="iconSet">
-				<img class="fill one" src="images/board_icon.svg" alt="Icon" draggable="true">
+				<img class="fill one" src="images/drums_icon.svg" alt="Icon" draggable="true">
 				<img class="fill two" src="images/drums_icon.svg" alt="Icon" draggable="true">
-				<img class="fill three" src="images/guitar_icon.svg" alt="Icon" draggable="true">
+				<img class="fill three" src="images/mic_icon.svg" alt="Icon" draggable="true">
 				<img class="fill four" src="images/mic_icon.svg" alt="Icon" draggable="true">
-			</div>
-
-			<div class="iconSet">
 				<img class="fill five" src="images/board_icon.svg" alt="Icon" draggable="true">
-				<img class="fill six" src="images/drums_icon.svg" alt="Icon" draggable="true">
+				<img class="fill six" src="images/board_icon.svg" alt="Icon" draggable="true">
 				<img class="fill seven" src="images/guitar_icon.svg" alt="Icon" draggable="true">
-				<img class="fill eight" src="images/mic_icon.svg" alt="Icon" draggable="true">
+				<img class="fill eight" src="images/guitar_icon.svg" alt="Icon" draggable="true">
 			</div>
 		</section>
 
+
 		<footer id="footer">
-			<h2>Designed and Created By:<br>Graham Vickers and James Pratt®</h2>
+			<h2 class="hidden">footer</h2>
+			<div id="moreGames">
+				<a href="#">CLICK HERE TO TRY OUT MORE OF OUR FUN GAMES!</a>
+			</div>
+			<div id="socialIcons">
+				<img src="images/" alt="facebook">
+				<img src="images/" alt="twitter">
+				<img src="images/" alt="instagram">
+			</div>
+			<p>Designed and Created by Graham Vickers and James Pratt</p>
 		</footer>
 	</section>
 		<script src="js/main.js"></script>
