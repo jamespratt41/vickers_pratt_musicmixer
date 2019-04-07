@@ -45,61 +45,41 @@
 			<div id="icons">
 
 				<div class="iconSvg">
-					<div class = "empty one" >
-					</div>
-					<div class="buttons">
-						<button type="button" name="Play">Play</button>
-						<button type="button" name="Pause">Pause</button>
-						<button type="button" name="Rewind">Rewind</button>
+					<div class = "dropzone one" >
 					</div>
 				</div>
 
 				<div class="iconSvg">
-					<div class = "empty two" >
-					</div>
-					<div class="buttons">
-						<button type="button" name="Play">Play</button>
-						<button type="button" name="Pause">Pause</button>
-						<button type="button" name="Rewind">Rewind</button>
+					<div class = "dropzone two" >
 					</div>
 				</div>
 
 				<div class="iconSvg">
-					<div class = "empty three" >
-					</div>
-					<div class="buttons">
-						<button type="button" name="Play">Play</button>
-						<button type="button" name="Pause">Pause</button>
-						<button type="button" name="Rewind">Rewind</button>
+					<div class = "dropzone three" >
 					</div>
 				</div>
 
 				<div class="iconSvg">
-					<div class = "empty four" >
-					</div>
-					<div class="buttons">
-						<button type="button" name="Play">Play</button>
-						<button type="button" name="Pause">Pause</button>
-						<button type="button" name="Rewind">Rewind</button>
+					<div class = "dropzone four" >
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- this is where the icons are stored -->
-		<section id="iconHolder">
-			<h2>Drag an Icon to Get Started</h2>
+		<section id="iconButtons">
+			<h2>Pick a set of Instruments</h2>
 			<div class="iconSet">
-				<img class="fill one" src="images/drums_icon.svg" alt="Icon" draggable="true">
-				<img class="fill two" src="images/drums_icon.svg" alt="Icon" draggable="true">
-				<img class="fill three" src="images/mic_icon.svg" alt="Icon" draggable="true">
-				<img class="fill four" src="images/mic_icon.svg" alt="Icon" draggable="true">
-				<img class="fill five" src="images/board_icon.svg" alt="Icon" draggable="true">
-				<img class="fill six" src="images/board_icon.svg" alt="Icon" draggable="true">
-				<img class="fill seven" src="images/guitar_icon.svg" alt="Icon" draggable="true">
-				<img class="fill eight" src="images/guitar_icon.svg" alt="Icon" draggable="true">
+				<img data-iconref="0" src="images/iconZero.svg" alt="drum">
+				<img data-iconref="1" src="images/iconOne.svg" alt="mic">
+
 			</div>
 		</section>
+
+		<section id="iconHolder">
+
+		</section>
+
 
 
 		<footer id="footer">
@@ -115,6 +95,15 @@
 			<p>Designed and Created by Graham Vickers and James Pratt</p>
 		</footer>
 	</section>
+	<audio data-musicref="iconOne0" src="audio/vocal1.wav" loop></audio>
+	<audio data-musicref="iconTwo0" src="audio/piano1.wav" loop></audio>
+	<audio data-musicref="iconThree0" src="audio/music1.wav" loop></audio>
+	<audio data-musicref="iconFour0" src="audio/kick1.wav" loop></audio>
+	<audio data-musicref="iconOne1" src="audio/vocal2.wav" loop></audio>
+	<audio data-musicref="iconTwo1" src="audio/piano2.wav" loop></audio>
+	<audio data-musicref="iconThree1" src="audio/music2.wav" loop></audio>
+	<audio data-musicref="iconFour1" src="audio/kick2.wav" loop></audio>
+
 		<script src="js/main.js"></script>
 	</body>
 </html>

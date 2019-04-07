@@ -1,31 +1,100 @@
-console.log('fired');
+(() => {
 
-const fill = document.querySelector('.fill');
-const empties = document.querySelectorAll('.empty');
+    const icons = ['iconOne', 'iconTwo', 'iconThree', 'iconFour'];
 
-// Fill listeners
-fill.addEventListener('dragend', dragEnd);
+    let iconsBox = document.querySelector('#iconHolder'),
+        iconSelectors = document.querySelectorAll('#iconButtons img'),
+        dropBoxes = document.querySelectorAll('.dropzone'),
+        audios = document.querySelectorAll('audio');
 
-// Loop through empty boxes and add listeners
-for (const empty of empties) {
-  empty.addEventListener('dragover', dragOver);
+    function createIcons(pictureIndex) {
 
-  empty.addEventListener('drop', dragDrop);
-}
+        icons.forEach((icon, index) => {
+            let newIcons = `<img draggable id="${icon + pictureIndex}" class="iconsImages" data-iconref="${pictureIndex}" data-musicref="${icon + pictureIndex}" src="images/${icon + pictureIndex}.svg" alt="icon thumbnail">`
 
-// Drag Functions
+            iconsBox.innerHTML += newIcons;
+            iconsBox.dataset.iconref = `${pictureIndex}`;
+        });
 
-function dragEnd() {
-  this.className = 'fill';
-}
+        initDrag();
 
-function dragOver(e) {
-  e.preventDefault();
-}
+    }
+
+    function initDrag() {
+		iconsBox.querySelectorAll('img').forEach(img => {
+			img.addEventListener("dragstart", function(e) {
+				// e.preventDefault();
+				console.log('draggin...')
+
+				e.dataTransfer.setData("text/plain", this.id);
+			});
+		});
+	}
+
+    function resetAudio() {
+        audios.forEach(audio => {
+            audio.currentTime = 0;
+        });
+    }
+
+    dropBoxes.forEach(box => {
+
+        box.addEventListener("dragover", function(e) {
+            e.preventDefault();
+            console.log('dragging over me');
+        });
+
+        box.addEventListener("drop", function(e) {
+            e.preventDefault();
+            console.log('you dropped it on me');
+
+
+            let icon = e.dataTransfer.getData("text/plain");
+            console.log(icon);
+            e.target.appendChild(document.querySelector(`#${icon}`));
+
+
+            resetAudio();
+
+            audios.forEach(audio => {
+                if (audio.dataset.musicref == icon) {
+                    audio.play();
+                }
+
+            });
+        });
+
+        box.addEventListener("click", function(e) {
+            console.log('clicked me');
+
+            let image = e.target;
+            box.removeChild(image);
+
+            audios.forEach(audio => {
+                if (audio.dataset.musicref == image.dataset.musicref) {
+                    audio.pause();
+                }
+            });
+
+            if (image.dataset.iconref == iconsBox.dataset.iconref) {
+                iconsBox.appendChild(image);
+            }
+        });
+
+    });
+
+
+    function resetIcons() {
+        iconsBox.innerHTML = "";
+        createIcons(this.dataset.iconref);
+    }
+
+    iconSelectors.forEach(iconImage => iconImage.addEventListener('click', resetIcons));
+
+    createIcons(0);
 
 
 
-function dragDrop() {
-  this.className = 'empty';
-  this.append(fill);
-}
+
+
+})();
